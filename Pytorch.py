@@ -97,14 +97,6 @@ print('Finished Training')
 torch.save(net, 'cifar10.pkl')
 # net = torch.load('cifar10.pkl')
 
-dataiter = iter(testloader)
-images, labels = dataiter.next()
-
-images, labels = images.to(device), labels.to(device)
-outputs = net(images)
-
-_, predicted = torch.max(outputs, 1)
-
 correct = 0
 total = 0
 with torch.no_grad():
