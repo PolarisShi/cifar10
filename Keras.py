@@ -89,7 +89,7 @@ for ii in range(10):
     print('Test accuracy =', score[1])
 
 save_model(model,'cifar10.h5')
-# load_model(model,'cifar10.h5')
+model = load_model('cifar10.h5')
 
 pred_Y = model.predict(test_X)
 score = model.evaluate(test_X, test_Y, verbose=0)
